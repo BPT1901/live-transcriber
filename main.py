@@ -8,12 +8,12 @@ from datetime import datetime
 import torch
 
 # ===== CONFIGURATION =====
-CHUNK_DURATION = 5              # seconds
+CHUNK_DURATION = 30              # seconds
 OVERLAP_DURATION = 0            # seconds
 SAMPLE_RATE = 16000             # Hz
 CHANNELS = 1
 FORMAT = pyaudio.paInt16
-MODEL_NAME = "large"
+MODEL_NAME = "large-v3"
 
 # Prompt for output filename
 TRANSCRIPT_FILE = input("Enter the filename for your transcription (e.g meeting_notes.txt): ").strip()
