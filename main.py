@@ -8,7 +8,7 @@ from datetime import datetime
 import torch
 
 # ===== CONFIGURATION =====
-CHUNK_DURATION = 30              # seconds
+CHUNK_DURATION = 45              # seconds
 OVERLAP_DURATION = 0            # seconds
 SAMPLE_RATE = 16000             # Hz
 CHANNELS = 1
@@ -114,7 +114,9 @@ def main():
                 # Run transcription
                 result = model.transcribe(
                     TEMP_AUDIO_FILE,
-                    language='en'
+                    language='en',
+                    temperature=0,
+                    beam_size=5
                 )
 
                 # Stop spinner
